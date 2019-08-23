@@ -1,9 +1,9 @@
 import React from 'react';
-import GitRepos from './components/GitRepos';
+import GitSearch from './components/GitSearch';
 
-export default function App(){
+const App = () => {
   return (
-    <GitRepos />
+    <GitSearch />
   )
-
 }
+export default App;
