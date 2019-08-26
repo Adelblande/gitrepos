@@ -30,9 +30,24 @@ export const BoxInfo = styled.div`
   display: flex;
   justify-content: center;
   width: 300px;
-  height: 60%;
+  height: 30%;
   position: absolute;
   top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #5e6f73;
+`;
+export const BoxInfoLocation = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 30%;
+  position: absolute;
+  top: 30%;
   right: 0;
   z-index: 1;
   box-sizing: border-box;

@@ -27,7 +27,7 @@ export default function GitSearch() {
     }
     userSearch && getData()
   }, [userSearch]);
-  console.log(repos);
+  // console.log(repos);
   return (
     <Container>
       <Box>
@@ -37,8 +37,8 @@ export default function GitSearch() {
         </ButtonGit>
       </Box>
       
-      {user && <Card user={user} />}
-      <Box>
+      {user && <Card user={user} repos={repos} />}
+      {/* <Box>
         <ul>
           {
             repos && repos.map(repo => (
@@ -46,7 +46,7 @@ export default function GitSearch() {
             ))
           }
         </ul>
-      </Box>
+      </Box> */}
 
     </Container>
   )

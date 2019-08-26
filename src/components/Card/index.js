@@ -3,8 +3,12 @@ import { Container, Photo, BoxImage, BoxInfo, BoxInfoGit, BoxIcon } from './styl
 
 import { FaCloud, FaStar, FaUserFriends, FaUsers, FaFolderOpen } from 'react-icons/fa';
 
-export default function Card({user}) {
-  // console.log(user);
+export default function Card({user, repos}) {
+  console.log(repos);
+  const stars = repos.reduce((acc, repo) => {
+    console.log(repo.name, repo.has_projects);
+    return acc + repo.stargazers_count;
+  }, 0);
   return (
     <Container>
       <BoxImage>
@@ -26,6 +30,7 @@ export default function Card({user}) {
         <BoxIcon>
           Stars
           <FaStar size={30} color="#74b392" />
+          <span>{stars}</span>
         </BoxIcon>
         <BoxIcon>
           Followers
