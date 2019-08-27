@@ -8,6 +8,7 @@ export default function GitSearch() {
   const [userSearch, setUserSearch] = useState();
   const [repos, setRepos] = useState();
   const [user, setUser] = useState();
+  // const [msg, setMsg] = useState();
   
   const userRef = useRef()
   const sendUser = () => {
@@ -16,14 +17,16 @@ export default function GitSearch() {
 
   useEffect(() => {
     async function getData() {
-      const resRepos = await fetch(`https://api.github.com/users/${userSearch}/repos`);
       const resUser = await fetch(`https://api.github.com/users/${userSearch}`);
-      
-      const dataRepos = await resRepos.json();
       const dataUser = await resUser.json();
       
+      const resRepos = await fetch(`https://api.github.com/users/${userSearch}/repos`);
+      const dataRepos = await resRepos.json();
+
       setRepos([...dataRepos])
       setUser({...dataUser})
+      
+      
     }
     userSearch && getData()
   }, [userSearch]);
@@ -36,6 +39,7 @@ export default function GitSearch() {
           <FaGithub size={40} />
         </ButtonGit>
       </Box>
+      
       
       {user && <Card user={user} repos={repos} />}
       {/* <Box>

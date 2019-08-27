@@ -21,7 +21,7 @@ export const BoxImage = styled.div`
   position: absolute;
   width: 150px;
   height: 100%;
-  background: linear-gradient(#74b392, #325C46);
+  background: linear-gradient(#7159C1, #0be3f6);
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
@@ -39,13 +39,14 @@ export const BoxInfo = styled.div`
   padding: 1rem;
   padding-top: 0;
   font-family: 'Roboto', sans-serif;
-  color: #5e6f73;
+  color: #7159C1;
 `;
 export const BoxInfoLocation = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
   width: 300px;
-  height: 30%;
+  height: 10%;
   position: absolute;
   top: 30%;
   right: 0;
@@ -54,7 +55,7 @@ export const BoxInfoLocation = styled.div`
   padding: 1rem;
   padding-top: 0;
   font-family: 'Roboto', sans-serif;
-  color: #5e6f73;
+  color: #7159C1;
 `;
 
 export const BoxInfoGit = styled.div`
@@ -76,7 +77,7 @@ export const Photo = styled.div`
   justify-content: center;
   width: 90px;
   height: 90px;
-  border: 1px solid #325C46;
+  border: 1px solid #0be3f6;
   border-radius: 45px;
   background-image: url(${props => props.bgImage});
   background-position: center;
@@ -88,7 +89,7 @@ export const BoxIcon = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #325C46;
+  color: #0be3f6;
   font-size: 10px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;

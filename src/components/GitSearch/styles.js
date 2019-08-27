@@ -26,8 +26,7 @@ export const ButtonGit = styled.button`
   padding: 5px 20px;
   border: none;
   border-radius: 5px;
-  /* background-image: linear-gradient(to right, #50176e, #5e5eff ); */
-  background-image: linear-gradient(to right, #74b392, #325C46 );
+  background-image: linear-gradient(to right, #7159C1, #0be3f6 );
   color: #FFF;
   font-weight: bold;
   cursor: pointer;
