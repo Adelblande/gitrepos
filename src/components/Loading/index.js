@@ -4,9 +4,9 @@ import { Girando } from  './styles';
 
 const Loading = () => (
 	<Girando>
-		<div className="loading is-animating">
-			<div className="loading-meio is-animating-inverse">
-				<div className="loading-interno is-animating-inverse"></div>
+		<div className="loading">
+			<div className="loading-meio">
+				<div className="loading-interno"></div>
 			</div>
 		</div>
 	</Girando>
