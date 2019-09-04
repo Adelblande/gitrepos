@@ -47,7 +47,7 @@ export const Girando = styled.div`
 		border-bottom: 2px solid #f57305;
 		border-left: 2px solid transparent;
 	}
-	/* .loading { */
+	.loading {
 		display: flex;
 		align-items: center;
 		width: 110px;
@@ -58,5 +58,5 @@ export const Girando = styled.div`
 		border-right: 2px solid transparent;
 		border-bottom: 2px solid transparent;
 		border-left: 2px solid #513081;
-	/* } */
+	}
 `;

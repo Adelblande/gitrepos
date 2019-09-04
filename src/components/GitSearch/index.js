@@ -3,12 +3,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Container, InputText, ButtonGit, Box } from './styles';
 import { FaGithub } from 'react-icons/fa';
 import Card from '../Card';
+import Loading from '../Loading';
 import {GlobalStyle} from  '../../globals';
 
 export default function GitSearch() {
   const [userSearch, setUserSearch] = useState();
   const [repos, setRepos] = useState();
   const [user, setUser] = useState();
+  const [loading, setLoading] = useState(false);
   // const [msg, setMsg] = useState();
   
   const userRef = useRef()
@@ -18,6 +20,8 @@ export default function GitSearch() {
 
   useEffect(() => {
     async function getData() {
+      setUser(null);
+      setLoading(true);
       const resUser = await fetch(`https://api.github.com/users/${userSearch}`);
       const dataUser = await resUser.json();
       
@@ -26,12 +30,12 @@ export default function GitSearch() {
 
       setRepos([...dataRepos])
       setUser({...dataUser})
-      
+      setLoading(false);
       
     }
     userSearch && getData()
   }, [userSearch]);
-  // console.log(repos);
+  
   return (
     <>
       <Container>
@@ -41,7 +45,7 @@ export default function GitSearch() {
             <FaGithub size={40} />
           </ButtonGit>
         </Box>
-              
+        {loading && <Loading />}
         {user && <Card user={user} repos={repos} />}
         {/* <Box>
           <ul>

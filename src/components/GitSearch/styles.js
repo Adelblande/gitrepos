@@ -33,7 +33,6 @@ export const ButtonGit = styled.button`
   color: #FFF;
   font-weight: bold;
   cursor: pointer;
-  outline: 0;
 `;
 
 export const Box = styled.div`
