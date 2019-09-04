@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Girando } from  './styles';
+import { ScreenLoading } from  './styles';
 
 const Loading = () => (
-	<Girando>
+	<ScreenLoading>
 		<div className="loading">
-			<div className="loading-meio">
-				<div className="loading-interno"></div>
+			<div className="loading-middle">
+				<div className="loading-internal"></div>
 			</div>
 		</div>
-	</Girando>
+	</ScreenLoading>
 )
 
 export default Loading;

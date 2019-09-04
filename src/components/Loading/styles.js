@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Girando = styled.div`
+export const ScreenLoading = styled.div`
 	@keyframes loading {
 		0% {
 			transform: rotate(0);
@@ -18,8 +18,8 @@ export const Girando = styled.div`
 			transform: rotate(360deg);
 		}
 	}
-	
-	.loading-interno {
+
+	.loading-internal {
 		width: 90px;
 		height: 90px;
 		border-radius: 50%;
@@ -28,7 +28,7 @@ export const Girando = styled.div`
 		border-right: 2px solid #35d1f5;
 		animation: loading-inverse 1s linear infinite;
 	}
-	.loading-meio {
+	.loading-middle {
 		display: flex;
 		align-items: center;
 		justify-content: center;
