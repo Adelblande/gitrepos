@@ -90,11 +90,14 @@ export const BoxIcon = styled.div`
   align-items: center;
   justify-content: center;
   color: #0be3f6;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
   span {
     font-size: 16px;
+  }
+  :hover {
+    color: #7159C1;
   }
 `;

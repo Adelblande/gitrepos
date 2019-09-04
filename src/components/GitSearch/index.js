@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Container, InputText, ButtonGit, Box } from './styles';
 import { FaGithub } from 'react-icons/fa';
 import Card from '../Card';
+import {GlobalStyle} from  '../../globals';
 
 export default function GitSearch() {
   const [userSearch, setUserSearch] = useState();
@@ -32,27 +33,29 @@ export default function GitSearch() {
   }, [userSearch]);
   // console.log(repos);
   return (
-    <Container>
-      <Box>
-        <InputText ref={userRef} placeholder="Digite o Usuario do Git"/>
-        <ButtonGit onClick={sendUser}>
-          <FaGithub size={40} />
-        </ButtonGit>
-      </Box>
-      
-      
-      {user && <Card user={user} repos={repos} />}
-      {/* <Box>
-        <ul>
-          {
-            repos && repos.map(repo => (
-              <li key={repo.id}>{repo.name}</li>
-            ))
-          }
-        </ul>
-      </Box> */}
+    <>
+      <Container>
+        <Box>
+          <InputText ref={userRef} placeholder="Digite o Usuario do Git"/>
+          <ButtonGit onClick={sendUser}>
+            <FaGithub size={40} />
+          </ButtonGit>
+        </Box>
+              
+        {user && <Card user={user} repos={repos} />}
+        {/* <Box>
+          <ul>
+            {
+              repos && repos.map(repo => (
+                <li key={repo.id}>{repo.name}</li>
+              ))
+            }
+          </ul>
+        </Box> */}
 
-    </Container>
+      </Container>
+      <GlobalStyle />
+    </>
   )
   
 }

@@ -10,26 +10,30 @@ export const Container = styled.div`
 
 export const InputText = styled.input`
   width: 300px;
-  height: 30px;
+  height: 50px;
   margin: 10px;
   padding: 10px;
-  border: 1px solid #CDCDCD;
+  border: 1px solid #7159C1;
   border-radius: 5px;
   font-size: 18px;
+  ::-webkit-input-placeholder {
+    color: #7159C1;
+  }
 `;
 
 export const ButtonGit = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 52px;
   padding: 5px 20px;
   border: none;
   border-radius: 5px;
-  background-image: linear-gradient(to right, #7159C1, #0be3f6 );
+  background: #7159C1;
   color: #FFF;
   font-weight: bold;
   cursor: pointer;
+  outline: 0;
 `;
 
 export const Box = styled.div`

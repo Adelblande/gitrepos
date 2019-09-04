@@ -9,6 +9,10 @@ export default function Card({user, repos}) {
     // console.log(repo.name, repo.has_projects);
     return acc + repo.stargazers_count;
   }, 0);
+
+  function showDetails(details) {
+    console.log(details);
+  }
   return (
     <Container>
       <BoxImage>
@@ -18,30 +22,30 @@ export default function Card({user, repos}) {
         <h2>{user.name}</h2>
       </BoxInfo>
       <BoxInfoLocation>
-        <FaMapMarkerAlt size={15} color="#0be3f6"/>
+        <FaMapMarkerAlt size={15} color="#0be3f6" />
         <h4>{user.location}</h4>
       </BoxInfoLocation>
       <BoxInfoGit>
-        <BoxIcon>
+        <BoxIcon onClick={() => showDetails('Repositories')}>
           Repositories
           <FaCloud size={30} color="#0be3f6" />
           <span>{user.public_repos}</span>
         </BoxIcon>
-        <BoxIcon>
+        <BoxIcon onClick={() => showDetails('Projects')}>
           Projects
           <FaFolderOpen size={30} color="#0be3f6" />
         </BoxIcon>
-        <BoxIcon>
+        <BoxIcon onClick={() => showDetails('Stars')}>
           Stars
           <FaStar size={30} color="#0be3f6" />
           <span>{stars}</span>
         </BoxIcon>
-        <BoxIcon>
+        <BoxIcon onClick={() => showDetails('Followers')}>
           Followers
           <FaUsers size={30} color="#0be3f6" />
           <span>{user.followers}</span>
         </BoxIcon>
-        <BoxIcon>
+        <BoxIcon onClick={() => showDetails('Following')}>
           Following
           <FaUserFriends size={30} color="#0be3f6" />
           <span>{user.following}</span>
